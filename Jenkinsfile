@@ -4,13 +4,13 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
-				bat 'ng build'
+		bat 'npm run ng -- build'
             }
         }
         stage('Test') {
             steps {
-                bat 'ng test --browsers ChromeHeadless --watch=false'
-				bat 'ng e2e'				
+                bat 'npm run ng test --browsers ChromeHeadless --watch=false'
+		bat 'npm run ng e2e'				
             }
         }
         stage('Deploy') {
