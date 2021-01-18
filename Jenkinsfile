@@ -9,7 +9,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'npm run ng test --browsers ChromeHeadless --watch=false'
 		bat 'npm run ng e2e'				
             }
         }
